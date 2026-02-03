@@ -4,7 +4,7 @@ export const constants = {
   profilesUrls: {
     linkedin: 'https://www.linkedin.com/in/antonio-ayola/',
     github: 'https://github.com/jpulgapa',
-    email: 'antonio.ayola.cortes@gmail.com',
+    email: 'sebas465yt@gmail.com',
     cv: '/04/03/2022.pdf',
     twitter: 'https://twitter.com/Antonio_Ayola_',
     number: '+57 3243496511',
