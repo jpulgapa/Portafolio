@@ -1,4 +1,4 @@
-import { useState, useEffect, memo } from 'react';
+import { useState, useEffect, memo, useCallback } from 'react';
 
 import styles from './Modal.module.css';
 
@@ -12,15 +12,16 @@ function Modal(props) {
   } = props;
   const [modal, setModal] = useState(openModal);
 
-  useEffect(() => {
-    if (openModal) openModalHandler();
-  }, [openModal]);
-
-  const openModalHandler = () => {
+  const openModalHandler = useCallback(() => {
     setModal(!modal);
     const body = document.getElementsByTagName('body');
     body[0].classList.add('hideScroll');
-  };
+  }, [modal]);
+
+  useEffect(() => {
+    if (openModal) openModalHandler();
+  }, [openModal, openModalHandler]);
+
   const closeModalHandler = () => {
     fnCloseModal();
     const body = document.getElementsByTagName('body');

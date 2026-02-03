@@ -7,7 +7,7 @@ import styles from './Card.module.css';
 const ModalCard = lazy(() => import('../Portfolio/ModalCard'));
 
 const Card = ({ project }) => {
-  const { id, category, date, title, image } = project;
+  const { category, date, title, image } = project;
   const [modal, setModal] = useState(false);
   // eslint-disable-next-line import/no-dynamic-require
   const img = require(`../../assets/portafolio/${image}`);

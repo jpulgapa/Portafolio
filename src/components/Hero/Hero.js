@@ -1,8 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
-import { Typewriter } from 'react-simple-typewriter';
 import hero from '../../assets/hero8.svg';
 import styles from './Hero.module.css';
-import { constants } from '../../utils/constants';
 import useIsInViewport from '../../utils/hooks/useIsInViewport';
 
 function Hero() {

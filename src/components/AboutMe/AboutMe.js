@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import hero from '../../assets/me.webp';
 import styles from './AboutMe.module.css';
-import { constants } from '../../utils/constants';
 
 const skills = [
   {

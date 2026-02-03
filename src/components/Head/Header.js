@@ -1,11 +1,8 @@
 import { useState, lazy, Suspense, useEffect } from 'react';
 
-import scrollTop from '../../utils/helpers/scrollTop';
 import useToggle from '../../utils/hooks/useToggle';
 import useScrollInto from '../../utils/hooks/useScrollInto';
 import useScrollSpy from '../../utils/hooks/useScrollSpy';
-
-import logo1 from '../../assets/logo_fondo_blanco_4.webp';
 import styles from './Header.module.css';
 
 import Modal from '../Modal/Modal';
@@ -17,7 +14,7 @@ const AboutMe = lazy(() => import('../AboutMe/AboutMe'));
 const Header = () => {
   const [modal, setModal] = useState(false);
 
-  const { open, handleOpen, handleClose, handleToggle } = useToggle();
+  const { open, handleOpen, handleClose } = useToggle();
   const [Mobile, setMobile] = useState(false);
   const [activeNav, setActiveNav] = useState(false);
   const [isReadyForInstall, setIsReadyForInstall] = useState(false);
